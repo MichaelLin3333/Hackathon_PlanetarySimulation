@@ -1,5 +1,7 @@
 # Planetary Simulation with Manim
 
+Project by Michael Lin, Rain Chen, and Alex Chen
+
 This repository contains a Python-based 3D planetary simulation using the [Manim](https://www.manim.community/) animation library. The simulation models gravitational interactions between celestial bodies (e.g., the Sun, Earth, and Mars) and animates their motion in a visually engaging 3D environment.
 
 ![Planetary Simulation Preview](preview.png)  
