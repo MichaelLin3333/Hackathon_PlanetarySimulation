@@ -86,14 +86,12 @@ To run this simulation, you need the following:
 
 1.  Navigate to the directory containing the simulation script:
 
-    bash
-    ```
+    ```bash
     cd path/to/simulation
     ```
 2.  Run the simulation using Manim:
 
-    bash
-    ```
+    ```bash
     manim -pql planetary_simulation.py PlanetarySimulation
     ```
     -   `-p`: Plays the animation after rendering.
@@ -110,31 +108,43 @@ You can customize the simulation to suit your needs:
 
 ### 1\. Add More Planets
 
--   Extend the `planets` list with additional celestial bodies:
+-   Extend the `planets` list by adding in new planet's mass, position, velocity, arbitrary radius and color used for visualization, respectively:
 
-    python
+    
+    for example: 
+    ```python
 
-    ```
-    jupiter = Planet(mass=1.898e27, position=[7.785e11, 0, 0], velocity=[0, 13070, 0])
-
-    planets.append(jupiter)
-
-    colors.append(GREEN) # Add a color for Jupiter
-
-    radii.append(0.3) # Add a radius for Jupiter
+    mass = np.array([
+            [1.989e30],       # Sun
+            [3.301e23],       # Mercury
+            [4.867e24],       # Venus
+            [5.972e24],       # Earth
+            [7.348e22],       # Moon
+            [6.417e23],       # Mars
+            [1.898e27],       # Jupiter
+            [8.932e22],       # Io
+            [4.8e22],         # Europa
+            [5.683e26],       # Saturn
+            [1.345e23]        # Titan
+        ], dtype=float)
+    
     ```
 
 ### 2\. Adjust Simulation Parameters
 
--   Modify the `DT` (time step) or the number of iterations to control the simulation's duration and speed:
+-   Modify the `t_step` (time step) or the number of iterations to control the simulation's duration and speed:
 
-    python
+    
+
+    ```python
+
+    t_step = 50 
 
     ```
 
-    DT = 50 # Smaller time step for finer updates
+    ```python
 
-    for _ in range(400): # Simulate more steps
+    for step in range(400): 
 
     ```
 
@@ -143,9 +153,9 @@ You can customize the simulation to suit your needs:
 
 -   Change the frame rate or resolution in the `config` settings:
 
-    python
+    
 
-    ```
+    ```python
 
     config.frame_rate = 60 # Set frame rate to 60 fps
 
