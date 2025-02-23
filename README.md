@@ -3,7 +3,6 @@
 This repository contains a Python-based 3D planetary simulation using the [Manim](https://www.manim.community/) animation library. The simulation models gravitational interactions between celestial bodies (e.g., the Sun, Earth, and Mars) and animates their motion in a visually engaging 3D environment.
 
 ![Planetary Simulation Preview](preview.png)  
-*(Insert a GIF or screenshot of your simulation here)*
 
 ---
 
@@ -15,8 +14,6 @@ This repository contains a Python-based 3D planetary simulation using the [Manim
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Customization](#customization)
-7. [Contributing](#contributing)
-8. [License](#license)
 
 ---
 
@@ -82,3 +79,87 @@ To run this simulation, you need the following:
    ```bash
    manim --help
    ```
+
+
+## Usage
+-----
+
+1.  Navigate to the directory containing the simulation script:
+
+    bash
+    ```
+    cd path/to/simulation
+    ```
+2.  Run the simulation using Manim:
+
+    bash
+    ```
+    manim -pql planetary_simulation.py PlanetarySimulation
+    ```
+    -   `-p`: Plays the animation after rendering.
+    -   `-q`: Sets the quality (`l` for low, `m` for medium, `h` for high).
+    -   Replace `PlanetarySimulation` with the name of the scene class if you modify it.
+3.  The rendered video will open automatically after rendering.
+
+
+
+## Customization
+-------------
+
+You can customize the simulation to suit your needs:
+
+### 1\. Add More Planets
+
+-   Extend the `planets` list with additional celestial bodies:
+
+    python
+
+    ```
+    jupiter = Planet(mass=1.898e27, position=[7.785e11, 0, 0], velocity=[0, 13070, 0])
+
+    planets.append(jupiter)
+
+    colors.append(GREEN) # Add a color for Jupiter
+
+    radii.append(0.3) # Add a radius for Jupiter
+    ```
+
+### 2\. Adjust Simulation Parameters
+
+-   Modify the `DT` (time step) or the number of iterations to control the simulation's duration and speed:
+
+    python
+
+    ```
+
+    DT = 50 # Smaller time step for finer updates
+
+    for _ in range(400): # Simulate more steps
+
+    ```
+
+
+### 3\. Modify Rendering Settings
+
+-   Change the frame rate or resolution in the `config` settings:
+
+    python
+
+    ```
+
+    config.frame_rate = 60 # Set frame rate to 60 fps
+
+    config.pixel_height = 1080 # Set resolution height
+
+    config.pixel_width = 1920 # Set resolution width
+
+    ```
+
+* * * * *
+
+
+## Acknowledgments
+---------------
+
+-   Thanks to the [Manim Community](https://www.manim.community/) for creating and maintaining this powerful animation library.
+-   Inspired by physics simulations and educational tools for understanding orbital mechanics.
