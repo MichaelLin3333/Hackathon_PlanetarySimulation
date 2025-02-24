@@ -71,8 +71,8 @@ To run this simulation, you need the following:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/planetary-simulation.git
-   cd planetary-simulation
+   git clone https://github.com/MichaelLin3333/Hackathon_PlanetarySimulation.git
+   cd Hackathon_PlanetarySimulation
    ```
    Install the required dependencies:
    ```bash
@@ -95,7 +95,7 @@ To run this simulation, you need the following:
 2.  Run the simulation using Manim:
 
     ```bash
-    manim -pql planetary_simulation.py PlanetarySimulation
+    manim -pql planetary main.py PlanetarySimulation
     ```
     -   `-p`: Plays the animation after rendering.
     -   `-q`: Sets the quality (`l` for low, `m` for medium, `h` for high).
